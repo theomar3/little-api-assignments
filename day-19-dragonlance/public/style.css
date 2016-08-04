@@ -1,0 +1,155 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*end of reset*/
+
+body {
+  font-family: Helvetica, Verdana, sans-serif;
+}
+
+.container {
+	max-width: 900px;
+	margin: 20px auto;
+}
+
+h1 {
+  font-size: 2em;
+	text-align: center;
+	margin-bottom: 20px;
+
+}
+
+img {
+	margin-left: 300px;
+}
+
+#dragonlance-list {
+	overflow: auto;
+	background-color: #E55B1A;
+}
+
+#name-list {
+	float: left;
+	width: 15%;
+
+}
+
+#race-list {
+	float: left;
+	width: 10%;
+}
+
+#description-list {
+	float: left;
+	width: 75%;
+}
+
+
+
+#name-list li {
+	background-color: #4C382F;
+	margin-bottom: 19.5px;
+	color: white;
+
+}
+
+#name-list li:nth-child(1) {
+	margin-bottom: 30px;
+}
+
+#name-list li:nth-child(3) {
+	margin-bottom: 25px;
+}
+
+
+#name-list li:nth-child(4) {
+	margin-bottom: 25px;
+}
+
+
+#name-list li:nth-child(6) {
+	margin-bottom: 30px;
+}
+
+
+#race-list li {
+	background-color:  #B22A26;
+	color: white;
+	margin-bottom: 19.5px;
+}
+
+#race-list li:nth-child(1) {
+	margin-bottom: 30px;
+}
+
+#race-list li:nth-child(3) {
+	margin-bottom: 28px;
+}
+
+
+#race-list li:nth-child(6) {
+	margin-bottom: 30px;
+}
+
+
+
+#description-list li{
+	background-color:  #4C382F;
+	color: white;
+	margin-bottom: 12px;
+
+}
+
+#description-list li:nth-child(3) {
+	margin-bottom: 25px;
+}
+
+#description-list li:nth-child(6) {
+	margin-bottom: 30px;
+}
