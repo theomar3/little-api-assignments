@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GitHub Repo Search</title>
+    <style media="screen">
+      .container {
+        max-width: 430px;
+        margin: 30px auto;
+        border: 1px solid black;
+        padding: 10px;
+      }
+
+      #searchInput {
+        padding: 10px;
+        width: 400px;
+      }
+
+      #searchList {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        background-color: #EEE;
+        margin-bottom: 10px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+
+
+      <h1>GitHub Repo Search</h1>
+
+      <input id="searchInput"></input>
+      <ul id="searchList">
+
+      </ul>
+
+
+    </div>
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+         <script src="repo-search.js"></script>
+         <script>JSApp.start();</script>
+  </body>
+</html>
