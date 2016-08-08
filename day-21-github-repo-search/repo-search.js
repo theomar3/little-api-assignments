@@ -10,6 +10,7 @@ if (this.JSApp === undefined) this.JSApp = {};
   function searchRepo(data) {
     console.log(data);
 
+
     for (var i = 0; i < data.items.length; i++) {
       var html =
       '<li>'+data.items[i].full_name+'</li>';
@@ -19,6 +20,9 @@ if (this.JSApp === undefined) this.JSApp = {};
   }
 
   function keyUpHappened(evt) {
+
+    $searchList.empty();
+
 
     if(evt.keyCode == 13) {
       var promise = $.ajax({
