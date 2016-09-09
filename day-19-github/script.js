@@ -1,26 +1,55 @@
-function dataBackFromApi(data) {
-  console.log(data)
-  $('#query-box').val(data.user_search_url);
-}
+'use strict';
+if (this.GitSearch === undefined) this.GitSearch = {};
 
-var promise = $.ajax({
-  url: 'https://api.github.com/'
-});
+(function(context) {
+  var $queryBox = $('#query-box');
 
-promise.done(dataBackFromApi);
+  function getDataFromApi(data) {
+    console.log(data)
 
-function searchComplete(data) {
-  console.log(data);
-}
+    $queryBox.val(data.user_search_url);
 
-function searchNow() {
-  var query = $('#query-box').val();
+  }
 
-var promise =  $.ajax({
-    url: query
-  });
+  function searchComplete(data) {
+    var $userList = $('#user-list');
+    console.log(data);
+    for(var i = 0; i < data.items.length; i++) {
+      var logins = data.items[i].login;
+      var html =
+      '<li>' + logins + '</li>';
+      $userList.append(html);
+    }
 
-  promise.done(searchComplete);
-}
+    
 
-$('#do-user-search').on('click', searchNow);
+  }
+
+  function searchNow() {
+    var query = $queryBox.val();
+
+    var promise = $.ajax({
+      url: query
+    });
+
+    promise.done(searchComplete);
+  }
+
+  function start() {
+
+
+
+    var promise = $.ajax({
+      url:'https://api.github.com/'
+    });
+    promise.done(getDataFromApi);
+
+    var $userSearch = $('#do-user-search');
+
+    $userSearch.on('click', searchNow);
+
+  }
+
+  context.start = start;
+
+})(window.GitSearch);
