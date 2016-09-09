@@ -15,14 +15,18 @@
       <img src="Dragonlance.jpg" alt="" /><h1>Characters</h1>
 
 
-      <ul id="dragonlance-list">
-        <ul id="name-list">
-        </ul>
-        <ul id="race-list">
-        </ul>
-        <ul id="description-list">
-        </ul>
-      </ul>
+      <table class="character-table">
+      </table>
+
+      <script type="text/template" id="character-template">
+        <tr>
+
+          <td class='names'><%=names%></td>
+          <td class ='race'><%=race%></td>
+          <td class='description'><%=description%></td>
+        </tr>
+
+      </script>
 
 
     </div>
@@ -31,7 +35,9 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.min.js"></script>
     <script src="script.js"></script>
+    <script> Dragonlance.start();</script>
   </body>
 
 </html>
