@@ -36,14 +36,19 @@
       <h1>GitHub Repo Search</h1>
 
       <input id="searchInput"></input>
-      <ul id="searchList">
 
+      <ul id="searchList">
       </ul>
+
+      <script type="text/template" id="name-template">
+        <li> <%=fullName%> </li>
+      </script>
 
 
     </div>
 
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.min.js"></script>
          <script src="repo-search.js"></script>
          <script>JSApp.start();</script>
   </body>

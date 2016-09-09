@@ -10,10 +10,15 @@ if (this.JSApp === undefined) this.JSApp = {};
   function searchRepo(data) {
     console.log(data);
 
+    var $templateHtml = $('#name-template').html();
+    var htmlFactory = _.template($templateHtml);
 
     for (var i = 0; i < data.items.length; i++) {
-      var html =
-      '<li>'+data.items[i].full_name+'</li>';
+      var html = htmlFactory(
+        {
+          fullName: data.items[i].full_name
+        }
+      );
 
       $searchList.append(html);
     }
@@ -22,6 +27,7 @@ if (this.JSApp === undefined) this.JSApp = {};
   function keyUpHappened(evt) {
 
     $searchList.empty();
+
 
 
     if(evt.keyCode == 13) {
